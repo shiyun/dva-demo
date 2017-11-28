@@ -1,8 +1,7 @@
 const webpack = require('webpack');
 
 module.exports = (webpackConfig, env) => {
-  const  production = env === 'production' ? true : false;
-
+  const production = env === 'production' ? true : false;
   webpackConfig.output.chunkFilename = '[name].[chunkhash].js';
 
   if(production) {
@@ -32,7 +31,6 @@ module.exports = (webpackConfig, env) => {
     locales: `${__dirname}/src/locales`,
   };
 
-  console.log(webpackConfig,env);
   return webpackConfig
 };
 

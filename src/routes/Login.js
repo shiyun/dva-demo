@@ -1,10 +1,11 @@
 import React from 'react';
-import {connect} from 'dva';
-import {message, Button, Input} from 'antd';
-import styles from './Login.less';
-import {createForm} from 'rc-form';
-import {JSEncrypt} from '../utils/jsencrypt';
+import { connect } from 'dva';
+import { message, Button, Input } from 'antd';
+import { FormattedMessage } from 'react-intl';
+import { createForm } from 'rc-form';
+import { JSEncrypt } from '../utils/jsencrypt';
 import qs from 'qs';
+import styles from 'less/login.less';
 
 function Login({
   login,
@@ -39,7 +40,7 @@ function Login({
   }
   return (
     <div className={styles.normal}>
-      <div className={styles.title}>Welcome to FinEX Asia</div>
+      <div className={styles.title}><FormattedMessage id="landPage.base_landing.login" /></div>
       <Input
         {...getFieldProps('identity', {initialValue: 'test@test.com', rules: [{required: true}]})} />
       <Input

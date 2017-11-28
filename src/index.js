@@ -1,8 +1,8 @@
 import dva from 'dva';
 import createHistory from 'history/createBrowserHistory';
-// import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom';
 import { message } from 'antd';
-// import { config } from 'utils';
+import { i18n as I18n, config } from 'utils';
 
 const browserHistory = createHistory();
 
@@ -24,5 +24,5 @@ const app = dva({
 app.router(require('./router'));
 
 // 5. Start
-const App = app.start('#root');
-// ReactDOM.render(<App />, document.getElementById('root'));
+const App = app.start();
+ReactDOM.render(<I18n defaultLang={config.language}><App /></I18n>, document.getElementById('root'));

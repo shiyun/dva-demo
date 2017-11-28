@@ -1,9 +1,7 @@
 const CONTXT_PATH = '/api/v2';
 
 module.exports = {
-  name: 'FinEX App',
-  prefix: 'FinEX',
-  footerText: 'FinEX Asia',
+  name: 'Blockchain_Explorer',
   logo: '/logo.png',
   iconFontCSS: '/iconfont.css',
   iconFontJS: '/iconfont.js',

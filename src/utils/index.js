@@ -3,8 +3,8 @@ import classnames from 'classnames';
 import lodash from 'lodash';
 import config from './config';
 import request from './request';
-import { color } from './theme';
-//import i18n from './i18n';
+// import { color } from './theme';
+import i18n from './i18n';
 
 // 连字符转驼峰
 String.prototype.hyphenToHump = function () {
@@ -103,10 +103,9 @@ const arrayToTree = (array, id = 'id', pid = 'pid', children = 'children') => {
 module.exports = {
   config,
   request,
-  color,
   classnames,
   queryURL,
   queryArray,
   arrayToTree,
-//  i18n,
+  i18n,
 }
