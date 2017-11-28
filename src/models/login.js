@@ -13,7 +13,7 @@ export default {
         message.error('Make sure your user ID or password is correct');
       } else {
         message.success('login success!');
-        yield put(routerRedux.push('/main'));
+        yield put(routerRedux.push('/main/index'));
       }
     },
 
